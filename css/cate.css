@@ -2,7 +2,7 @@
   custom properties
 --------------------------------------------- */
 :root {
---color-1: #c71ea6;
+--color-1: #009bea;
 --color-2: #fdb400;
 --color-3: #ce1970;
 --color-4: #ec4016;
@@ -188,7 +188,7 @@ body {
   overflow-x: hidden;
   scroll-behavior: smooth; /*for scrolling to page anchors*/
   height: calc(100vh - var(--metabar-height));
-  margin-top: 80px;
+  margin-top: calc(var(--metabar-height) - 20px);
 }
 
 .spacer-xsmall {
@@ -536,6 +536,10 @@ ul::marker {
 /* ------------------------------------------
   BANNER AREA
 --------------------------------------------- */
+
+.videobanner {
+  padding: 0;
+}
 
 .banner {
   background-color: transparent;
