@@ -1,0 +1,12 @@
+- href: "index.html"
+  caption: Home
+- href: "features.html"
+  caption: Leistungen
+- href: "variants.html"
+  caption: Varianten
+- href: "interview_fws.html"
+  caption: interview
+- href: "interview_fws-slider.html"
+  caption: interview-slider
+- href: "contact.html"
+  caption: Kontakt
