@@ -1,8 +1,8 @@
-!doctype html>
+<!doctype html>
 <html>
 <head>
     <meta charset="utf-8">
-    <title>{{ page_meta.title }}</title>
+    <title>CaT Concepts and Training GmbH</title>
     <link rel="shortcut icon" type="image/jpg" href="favicon.ico"/>
     <meta name="description" content="{{ page_meta.description }}" />
     <meta name="keyword" content="{{ page_meta.keywords | join(', ') }}" />
@@ -21,7 +21,6 @@
 </head>
 
 <body>
-
     <header>
         <div class="container">
             <div class="row">
@@ -42,50 +41,24 @@
         </div>
     </header>
     
-    <section class="scroll-area">
-    
-        <div class="full_screen">
-            <div class="full_screen_video">
-                <div class="vimeo_player vimeo_wrapper">
-                    <!-- CK showreel 2010
-                    <iframe src="https://player.vimeo.com/video/15533469?autoplay=1background=1" allow="autoplay; fullscreen;" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen="" data-ready="true" frameborder="0">
-                    -->
-                    <!-- CaT Imagefilm short -->
-                    <iframe src="https://player.vimeo.com/video/752450335?h=3d15618355&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen title="CAT Imageclip"></iframe></div>
-                    <!-- CaT Erklaerfilm
-                    <iframe src="https://player.vimeo.com/video/752445382?h=3b83ae145c&badge=0&autopause=0&player_id=0&app_id=58479" frameborder="0" allow="autoplay; fullscreen" allowfullscreen title="CAT Showcase"></iframe>
-                    </iframe>
+    <div class="full_screen">
+        <div class="full_screen_video">
+            <div class="vimeo_player vimeo_wrapper">
+                <!-- CK showreel 2010
+                <iframe src="https://player.vimeo.com/video/15533469?autoplay=1background=1" allow="autoplay; fullscreen;" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen="" data-ready="true" frameborder="0">
                 -->
-                </div>
+                <!-- CaT Imagefilm short -->
+                <iframe src="https://player.vimeo.com/video/752450335?h=3d15618355&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen title="CAT Imageclip"></iframe>
+                <!-- CaT Erklaerfilm
+                <iframe src="https://player.vimeo.com/video/752445382?h=3b83ae145c&badge=0&autopause=0&player_id=0&app_id=58479" frameborder="0" allow="autoplay; fullscreen" allowfullscreen title="CAT Showcase"></iframe>
+                </iframe>
+            -->
             </div>
-        </section>
+        </div>
+    </div>
       
-    </section> <!--closes scroll-section in htmlhead.html -->
-
-
-
-<!-- Videolightbox kill video on close
-https://clicknathan.com/web-design/stop-a-youtube-video-from-playing-after-lightbox-closes/
--->
-    <script>
-        // We store the URL of the iframe to set in when video is opened and remove
-        // it when video is closed. This prevents autostart on page reload.
-        var url = document.querySelector('.video-wrapper iframe').getAttribute('src');
-        document.querySelector('.btn-video').addEventListener("click", function(ev) {
-            document.querySelector('.video-wrapper iframe').setAttribute('src', url);
-        });
-        document.querySelector('.close').addEventListener("click", function(ev) {
-            document.querySelector('.video-wrapper iframe').setAttribute('src', '');
-        });
-    </script>
     <script src="jquery/jquery-2.x.min.js"></script>
     <script src="js/fixed-responsive-nav.js"></script>
-    <script>
-		fluidvids.init({
-			selector: ['iframe', 'object'], // runs querySelectorAll()
-			players: ['www.youtube.com', 'player.vimeo.com'] // players to support
-		});
-	</script>
     <script src="https://player.vimeo.com/api/player.js"></script>
     
 </body>

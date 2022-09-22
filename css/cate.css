@@ -269,7 +269,7 @@ body {
 --------------------------------------------- */
 
 header, .header {
-  background: rgba(255, 255, 255, 0.95);
+  background: rgba(255, 255, 255, 0.5);
   position: fixed; /* fix for scrolling behaviour ".scroll-area" */ 
 	left: 0;
 	right: 0;
