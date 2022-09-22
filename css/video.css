@@ -26,7 +26,7 @@
     overflow: hidden;
 }
 
-.vimeo_wrapper iframe{
+.vimeo_wrapper iframe {
     width: 100vw;
     height: 56.25vw;
     min-height: 100vh;
