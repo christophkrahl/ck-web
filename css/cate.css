@@ -101,6 +101,27 @@
 	opacity: 1;
 }
 
+/* -----------------------------------------
+--- Flex helper classes
+--------------------------------------------*/
+
+.flex {
+  display: flex;
+}
+
+.flex.centerX {
+  align-items: center;
+}
+
+.flex.centerY {
+  justify-content: center;
+}
+
+.flex.centerXY {
+  align-items: center;
+  justify-content: center;
+}
+
 /* ------------------------------------------
  --- TYPO
 --------------------------------------------- */
@@ -139,9 +160,14 @@ p {
   color: var(--text-color-invert);
 }
 
+.font-bg {
+  background-color: var(--color-1);
+  padding: 5px 10px;
+}
 
 h1 {
-
+  font-size: 62px;
+  line-height: 62px;
 }
 
 h2 {
