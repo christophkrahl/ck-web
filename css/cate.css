@@ -3,7 +3,7 @@
 --------------------------------------------- */
 :root {
 --color-1: #009bea;
---color-2: #fdb400;
+--color-2: #c1d31c;
 --color-3: #ce1970;
 --color-4: #ec4016;
 --color-5: #faae1d;
@@ -19,7 +19,7 @@
 --border-radius-sm: 8px;
 --border-radius-md: 15px;
 --border-radius-xl: 50px;
---metabar-height: 80px;
+--metabar-height: 60px;
 --font-size-base: 16px;
 
 }
@@ -269,7 +269,7 @@ body {
 --------------------------------------------- */
 
 header, .header {
-  background: rgba(255, 255, 255, 1);
+  background: rgba(0, 0, 0, 0);
   position: fixed; /* fix for scrolling behaviour ".scroll-area" */ 
 	left: 0;
 	right: 0;
@@ -281,10 +281,14 @@ header, .header {
 }
 
 header {
-  box-shadow: 0 0 10px rgba(0,0,0,.04);
+  box-shadow: 0 0 10px rgba(0,0,0,0);
   position: fixed;
 	width: 100%;
-	box-shadow: 3px 1px 0.99px 0.01px rgba(0, 0, 0, 0.05);
+	box-shadow: 3px 1px 0.99px 0.01px rgba(0, 0, 0, 0);
+}
+
+header:hover {
+  background: rgba(255, 255, 255, .3);
 }
 
 header.sticky, .header.sticky {
@@ -316,7 +320,7 @@ nav ul li a  {
 	font-size: 1em;
 	font-weight: 400;
 	padding: 0;
-	color: var(--text-color);
+	color: var(--text-color-invert);
 }
 
 nav ul li a:hover {
@@ -326,7 +330,7 @@ nav ul li a:hover {
 
 /* contact Highlight */
 nav.nav-collapse ul li:last-child a {
-  background: var(--color-2);
+  background: var(--color-1);
   color: var(--text-color-invert);
   border-radius: var(--border-radius-xl);
   cursor: pointer;
@@ -338,7 +342,7 @@ nav.nav-collapse ul li:last-child a {
 }
 
 nav.nav-collapse ul li:last-child:hover a {
-  background: var(--color-1);
+  background: var(--color-2);
 }
 
 /* ------------------------------------------
