@@ -193,6 +193,7 @@
 
 .box-image {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
@@ -220,6 +221,14 @@
   font-size: 2.5rem;
   font-weight: 200;
   z-index: 1;
+}
+
+.box-image span.title {
+  font-size: 2.5rem;
+}
+
+.box-image span.text {
+  font-size: 1.5rem;
 }
 
 .fill-box:hover span,
