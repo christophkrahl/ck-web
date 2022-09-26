@@ -165,6 +165,7 @@
   left: 0px;
   right: 0px;
   overflow: hidden;
+  cursor: pointer;
 }
 
 .box-image {
@@ -180,6 +181,53 @@
   background-position: center;
   border: 2px solid #fff;
 }
+
+/* 
+* https://css-tricks.com/zooming-background-images/ 
+*/
+
+.fill-box:hover .box-image {
+  transform: scale(1.15);
+  transition: all .5s;
+}
+
+.box-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.box-image::before {
+  content: "";
+  display: none;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(52, 73, 94, 0.75);
+}
+
+.fill-box:hover .box-image:before,
+.fill-box:focus .box-image:before {
+  display: block;
+}
+
+.box-image span {
+  color: white; /* Good thing we set a fallback color! */
+  display: none;
+  font-family: inherit;
+  font-size: 2.5rem;
+  font-weight: 200;
+  z-index: 1;
+}
+
+.fill-box:hover span,
+.fill-box:focus span {
+  display: block;
+}
+
+/* end image zoom */
 
 .box-dim {
   background-color: #000033;
