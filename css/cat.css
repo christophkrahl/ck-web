@@ -1,11 +1,14 @@
-/* ------------------------------------------
+/* 
+****************************************
   custom properties
---------------------------------------------- */
+****************************************
+*/
+
 :root {
 --color-1: #009bea;
 --color-2: #c1d31c;
---color-3: #ce1970;
---color-4: #ec4016;
+--color-3: #89d37e;
+--color-4: #ce1970;
 --color-5: #faae1d;
 --color-6: #4a154b;
 --bg-color: #ffffff;
@@ -21,11 +24,13 @@
 --border-radius-xl: 50px;
 --metabar-height: 60px;
 --font-size-base: 16px;
-
 }
-/* ------------------------------------------
+
+/* 
+****************************************
   Font-Einbindung
---------------------------------------------- */
+****************************************
+*/
 
 /* Nunito */
 @font-face {
@@ -90,9 +95,11 @@
   font-family: 'cat-icons', sans-serif;
 }
 
-/* -----------------------------------------
+/* 
+****************************************
 --- ENABLE ANIMATIONS
---------------------------------------------*/
+****************************************
+*/
 
 .os-animation {
 	opacity: 0;
@@ -101,9 +108,11 @@
 	opacity: 1;
 }
 
-/* -----------------------------------------
+/* 
+****************************************
 --- Flex helper classes
---------------------------------------------*/
+****************************************
+*/
 
 .flex {
   display: flex;
@@ -122,9 +131,79 @@
   justify-content: center;
 }
 
-/* -----------------------------------------
+.col {
+  flex-direction: column;
+}
+
+/* 
+****************************************
+ Fullscreen Videohead
+****************************************
+*/
+
+.dim,
+.video-overlay {
+  width:100%; 
+  height:100%; 
+  background-color: #1A1D2D; 
+  position:absolute; 
+  opacity: 0.1;
+  top:0; 
+  left:0; 
+  right:0; 
+  bottom:0; 
+  z-index:998;
+}
+
+.video-overlay {
+  background-color: transparent;
+  opacity: 1;
+  z-index:999;
+}
+
+.full_screen {
+  height: 100vh;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+}
+
+.full_screen_video {
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+}
+
+.video_wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.video_wrapper iframe {
+  width: 100vw;
+  height: 56.25vw;
+  min-height: 100vh;
+  min-width: 177.77vh;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* 
+****************************************
 --- media collection classes
-------------------------------------------- */
+****************************************
+*/
 .media-collection {
   position: relative;
 }
@@ -187,8 +266,8 @@
 */
 
 .fill-box:hover .box-image {
-  transform: scale(1.15);
-  transition: all .5s;
+  transform: scale(1.05);
+  transition: all .7s;
 }
 
 .box-image {
@@ -201,12 +280,26 @@
 .box-image::before {
   content: "";
   display: none;
+  filter: brightness(.1);
   height: 100%;
   width: 100%;
   position: absolute;
   top: 0;
   left: 0;
-  background-color: rgba(52, 73, 94, 0.75);
+  opacity: .8;
+  background-color: var(--color-1);
+}
+
+.box-image.green::before {
+  background-color: var(--color-1);
+}
+
+.box-image.green2::before {
+  background-color: var(--color-1);
+}
+
+.box-image.pink::before {
+  background-color: var(--color-1);
 }
 
 .fill-box:hover .box-image:before,
@@ -215,20 +308,22 @@
 }
 
 .box-image span {
-  color: white; /* Good thing we set a fallback color! */
+  color: white;
   display: none;
   font-family: inherit;
-  font-size: 2.5rem;
-  font-weight: 200;
+  padding-bottom: 5px;
   z-index: 1;
 }
 
 .box-image span.title {
-  font-size: 2.5rem;
+  color: var(--color-1);
+  font-size: 2.8rem;
+  font-weight: 900;
 }
 
 .box-image span.text {
   font-size: 1.5rem;
+  font-weight: 200;
 }
 
 .fill-box:hover span,
@@ -239,13 +334,13 @@
 /* end image zoom */
 
 .box-dim {
-  background-color: #000033;
+  background-color: rgba(0, 0, 0, 1);
   position: absolute;
   top: 0px;
   bottom: 0px;
   left: 0px;
   right: 0px;
-  opacity: 0.2;
+  opacity: .1;
 }
 
 .box-over-state {
@@ -310,9 +405,11 @@
   clear: both;
 }
 
-/* ------------------------------------------
+/* 
+****************************************
  --- TYPO
---------------------------------------------- */
+****************************************
+*/
 
 h1,
 h2,
@@ -384,9 +481,11 @@ h5 {
   width: 85%;
 }
 
-/* ------------------------------------------
+/* 
+****************************************
 --- GENERAL ELEMENTS
---------------------------------------------- */
+****************************************
+*/
 
 body {
 	font-family: 'Nunito', sans-serif;
@@ -451,9 +550,11 @@ body {
 }
 
 
-/* ------------------------------------------
+/* 
+****************************************
  --- BACKGROUNDS
--------------------------------------------- */
+****************************************
+*/
 
 .bg {
   background: #ffffff;
@@ -478,9 +579,11 @@ body {
   margin-bottom: 100px;
 }
 
-/* ------------------------------------------
+/* 
+****************************************
   MENU STYLES
---------------------------------------------- */
+****************************************
+*/
 
 header, .header {
   background: rgba(0, 0, 0, 0);
@@ -563,16 +666,21 @@ nav.nav-collapse ul li:last-child:hover a {
   background: var(--color-2);
 }
 
-/* ------------------------------------------
+/* 
+****************************************
   MENU STYLES RESPONSIV
---------------------------------------------- */
+****************************************
+*/
+
 .nav-toggle:before {
   color: var(--text-color); /* Edit this to change the Hamburger icon color */
 }
 
-/* ------------------------------------------
+/* 
+****************************************
 --- IMAGES
--------------------------------------------*/
+****************************************
+*/
 
 img.rounded {
   border-radius: var(--border-radius-md);
@@ -587,9 +695,11 @@ img.icon {
 }
 
 
-/* ------------------------------------------
+/* 
+****************************************
 --- BUTTONS 
---------------------------------------------- */
+****************************************
+*/
 
 .button-container {
   margin-bottom: 20px;
@@ -741,9 +851,12 @@ a:hover {
   margin: -100px;
 }
 
-/* ------------------------------------------
+/* 
+****************************************
  --- LISTINGS
---------------------------------------------- */
+****************************************
+*/
+
 ul {
   list-style-type: "/  ";
   padding-inline-start: 15px;
@@ -755,9 +868,11 @@ ul::marker {
       color: var(--color-1);
   }
 
-/* ------------------------------------------
+/* 
+****************************************
   BANNER AREA
---------------------------------------------- */
+****************************************
+*/
 
 .videobanner {
   padding: 0;
@@ -856,9 +971,11 @@ ul::marker {
   margin-bottom: 1em;
 }
 
-/* ------------------------------------------
+/* 
+****************************************
  --- Modul- Alle
---------------------------------------------- */
+****************************************
+*/
 
 span.line {
   height: 0;
@@ -869,9 +986,11 @@ span.line {
   content:none;
 }
 
-/* ------------------------------------------
+/* 
+****************************************
  --- MODUL-Info
---------------------------------------------- */
+****************************************
+*/
 
 
 .info {
@@ -881,9 +1000,11 @@ span.line {
   background-repeat: no-repeat;
 }
 
-/* ------------------------------------------
+/* 
+****************************************
  --- MODUL-Workflow
---------------------------------------------- */
+****************************************
+*/
 
 .workflow {
   /* background-image: url("../images/caterundum-service-61efc736.png"); */
@@ -892,9 +1013,12 @@ span.line {
   background-position: 1em 2em;
 }
 
-/* ------------------------------------------
+
+/* 
+****************************************
  --- MODUL-Contact
---------------------------------------------- */
+****************************************
+*/
 
 .cat-logo {
   max-height: 50px;
@@ -909,9 +1033,11 @@ span.line {
   margin-right: 0.5em;
 }
 
-/* ------------------------------------------
+/* 
+****************************************
  --- MODUL-Testimonials
---------------------------------------------- */
+****************************************
+*/
 
 .testimonials {
   background-image: url("../images/home-banner-bg-screens.png");
@@ -928,9 +1054,11 @@ span.line {
   font-weight: 600;
 }
 
-/* ------------------------------------------
+/* 
+****************************************
  --- Modul- Services
---------------------------------------------- */
+****************************************
+*/
 
 .feature-image img {
   width: 100%;
@@ -956,9 +1084,12 @@ span.line {
   max-height: 450px;
 }
 
-/* ------------------------------------------
+/* 
+****************************************
  --- Modul- Services
---------------------------------------------- */
+****************************************
+*/
+
 .services {
   background: var(--bg-color-2);
   color: var(--text-color);
@@ -996,9 +1127,11 @@ span.line {
   transition:all 0.4s;}
 
 
-/* ------------------------------------------
+/* 
+****************************************
  --- Modul- CTA 2, 3 & About
---------------------------------------------- */
+****************************************
+*/
 
 .cta2 a , .cta3 a, .button {
   visibility: hidden;
@@ -1012,55 +1145,14 @@ video {
 .video p {
   visibility: hidden;
 }
-/* Button wieder rausgenommen
-.cta2 a , .cta3 a, .button {
-  width: 200px;
-  height: 50px;
-	background: var(--color-1);
-  font-size: 13px;
-}
 
-.cta2 a:hover{background:#fff; color: #ed145b; transition:all 0.4s;}
-.cta3 a:hover{background:var(--color-2); color: #fff; transition:all 0.5s;}
 
-.video p {
-  width: 200px;
-  height: 50px;
-  line-height: 50px;
-  border-radius: var(--border-radius-xl);
-  background: var(--color-1);
-  display: block;
-  color: #fff;
-  margin:  auto 0px;
-  font-weight: 700;
-  font-size: 13px;
-  text-transform: none;
-  text-align: center;
-}
-
-.video p:hover{background:var(--color-2); color: #fff; transition:all 0.5s;}
-
+/* 
+****************************************
+ --- Modul- cta1
+****************************************
 */
 
-
-.cta2 {
- 
-  background: var(--bg-color-1);
-  color: var(--text-color);
-  
-}
-
-.cta3 #teilnehmer-innen-im-fokus {
-  text-align: left;
-  margin-bottom: 0px;
-  max-height: 40px;
-}
-
-
-
-/* ------------------------------------------
- --- Modul- cta1
---------------------------------------------- */
 .joinnow {
   background: var(--bg-color-2);
   text-align: center;
@@ -1091,9 +1183,11 @@ video {
   background: var(--color-1); 
   transition:all 0.4s;}
 
-/* ------------------------------------------
+/* 
+****************************************
  ---- INTERVIEWS
- -------------------------------------------*/
+****************************************
+*/
 
  .card-wrapper {
   flex-grow: 1;
@@ -1111,9 +1205,11 @@ video {
 
 }
 
-/* ------------------------------------------
+/* 
+****************************************
  --- Modul- price / Varianten
---------------------------------------------- */
+****************************************
+*/
 
 
 .price .price-container {
@@ -1268,10 +1364,11 @@ video {
 }
 
 
-
-/* ------------------------------------------
- --- Modul- price / Varianten 2 ErgÃ¤nzungen
---------------------------------------------- */
+/* 
+****************************************
+ --- Modul- price / Varianten 2 Ergänzungen
+****************************************
+*/
 
 .varianten .price-container a {
 	width: auto;
@@ -1338,9 +1435,11 @@ li.variantentext {
   text-align: left;
 }
 
-/* ------------------------------------------
+/* 
+****************************************
  --- REFERENZEN
- ------------------------------------------ */
+****************************************
+*/
 
  .ref-logo {
    margin: 1.5em;
@@ -1352,18 +1451,26 @@ li.variantentext {
   height: 34px;
 }
 
-/* ------------------------------------------
+
+/* 
+****************************************
  --- Partner
---------------------------------------------- */
+****************************************
+*/
+
 .linkpartner {
   color: var(--color-1);
 }
 
 .linkpartner:hover{color:var(--color-2); transition:all 0.5s;}
 
-/* ------------------------------------------
+
+/* 
+****************************************
  --- Impressum & Datenschutz
---------------------------------------------- */
+****************************************
+*/
+
 .impressum {
   text-align: center;
 }
@@ -1383,9 +1490,11 @@ li.variantentext {
 .linkdatenschutz:hover{color:var(--color-2); transition:all 0.5s;}
 
 
-/* ------------------------------------------
+/* 
+****************************************
  --- FOOTER
- --------------------------------------------- */
+****************************************
+*/
 
  footer {
   padding: 55px 0;
@@ -1429,9 +1538,11 @@ footer a:hover {
   color: var(--color-2);
 }
 
-/* ------------------------------------------
+/* 
+****************************************
  --- Buttons unsichtbar machen
---------------------------------------------- */
+****************************************
+*/ 
 
 /* Accordion styles */
 
@@ -1518,9 +1629,11 @@ input:checked  ~ .tab-content {
 }
 
 
-/* ------------------------------------------
+/* 
+****************************************
  --- BXSLIDER Testimonials
---------------------------------------------- */
+****************************************
+*/ 
 
 /* icon from iconfont
 .bx-wrapper:before {
@@ -1563,9 +1676,11 @@ input:checked  ~ .tab-content {
   content: "\e903";
 }
 
-/* ------------------------------------------
+/* 
+****************************************
  --- FORM CONTACT
---------------------------------------------- */
+****************************************
+*/
 
 input:focus-visible {
   outline: 1px solid var(--color-1);
