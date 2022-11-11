@@ -183,7 +183,7 @@
   right: 0px;
 }
 
-.video_wrapper {
+.video_wrapper{
   position: absolute;
   top: 0;
   left: 0;
@@ -202,6 +202,17 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+/* 
+****************************************
+ Fullscreen img-head
+****************************************
+*/
+
+.video_wrapper img {
+  filter: blur(5px); /* brightness(.8); */
+  width: 100%;
 }
 
 /* 
