@@ -14,7 +14,7 @@
   }
   
   .col {
-
+    position: relative;
   }
 
   .col1 { grid-area: col1; height: 50vw}
