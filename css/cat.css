@@ -440,6 +440,10 @@ header.sticky, .header.sticky {
   padding: 0;
 }
 
+.logo img {
+  height: 35px;
+}
+
 .nav-collapse a:active,
 .nav-collapse .active a {
   color:var(--color-3);
