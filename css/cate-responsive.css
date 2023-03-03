@@ -26,7 +26,7 @@
 @media only screen and (max-width: 767px) {
 
 	.backcolor {
-        background:rgba(255,255,255,.99);
+        background: transparent; /* var(--bg-color-dark);*/
     }
 
     /* no ornaments on small devices */  
@@ -51,7 +51,7 @@
         font-family: 'Nunito';
         content: "x";
         font-weight: 300;
-        color: var(--color-1);
+        color: var(--text-color-invert);
     }
 
     nav.nav-collapse ul {

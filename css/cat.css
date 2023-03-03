@@ -92,8 +92,9 @@
   src: url("../fonts/cat/cat-icons.eot?#iefix") format("embedded-opentype"), url("../fonts/cat/cat-icons.woff") format("woff"), url("../fonts/cat/cat-icons.ttf") format("truetype"), url("../fonts/cat/cat-icons.svg#cat") format("svg");
 }
 
-.iconfont {
+.iconfont, i {
   font-family: 'cat-icons', sans-serif;
+  font-style:normal;
 }
 
 /* 
@@ -171,7 +172,7 @@
   min-height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: end;
   position: relative;
 }
 
@@ -250,6 +251,10 @@ p {
   margin: 0 0 1em 0;
 }
 
+p span.hl {
+  font-weight: 400;
+}
+
 .hero p {
   font-size: 1.4em;
   line-height: 1.5em;
@@ -282,8 +287,8 @@ p {
 }
 
 h1 {
-  font-size: 3.6rem;
-  line-height: 3.6rem;
+  font-size: 3.3rem;
+  line-height: 3.3rem;
 }
 
 h2 {
@@ -393,6 +398,15 @@ h5 {
   background: var(--bg-color-3);
 }
 
+.bg.overlay {
+  background-color: transparent;
+  position: relative;
+}
+
+.bg.overlay.bottom {
+  bottom: 0;
+}
+
 .innerspace {
   padding: 80px 0;
 }
@@ -408,7 +422,7 @@ h5 {
 */
 
 header, .header {
-  background: rgba(70, 70, 70, .25);
+  background: rgba(70, 70, 70, 0);
   position: fixed; /* fix for scrolling behaviour ".scroll-area" */ 
 	left: 0;
 	right: 0;
@@ -428,20 +442,24 @@ header {
 
 header:hover,
 .header.active {
-  background: rgba(70, 70, 70, .85);
+  background: rgba(70, 70, 70, .95);
+}
+
+.header.active {
+  top: -80px;
 }
 
 header.sticky, .header.sticky {
-  background: rgba(255, 255, 255, 0.95);
+  background: rgba(255, 255, 255, .95);
 }
 
 .logo {
-  height: var(--metabar-height);
   padding: 0;
 }
 
 .logo img {
-  height: 35px;
+  height: 85px;
+  padding: 10px 0;
 }
 
 .nav-collapse a:active,
@@ -496,7 +514,43 @@ nav.nav-collapse ul li:last-child:hover a {
 */
 
 .nav-toggle:before {
-  color: var(--text-color); /* Edit this to change the Hamburger icon color */
+  color: var(--text-color-invert); /* Edit this to change the Hamburger icon color */
+}
+
+.page-nav-container {
+  position: fixed;
+  top: 38vh;
+  right: 0;
+}
+
+.page-nav {
+  background-color: rgba(50,50,50,.6);
+  border-radius: var(--border-radius-sm);
+  color: #fff;
+  display: flex;
+  font-size: 1.5rem;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 3px;
+  height: 60px;
+  width: 60px;
+}
+
+.page-nav:hover {
+  background-color: rgba(50,50,50,.9);
+  transition: all .5s;
+}
+
+.page-nav.forward {
+  transform: rotate(270deg);
+}
+
+.page-nav.back {
+  transform: rotate(90deg);
+}
+
+.page-nav.up {
+  transform: rotate(180deg);
 }
 
 /* 
@@ -1400,7 +1454,7 @@ input.accordion {
 .tabs {
   border-radius: var(--border-radius-sm);
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   overflow: hidden;
 }
 
@@ -1411,23 +1465,23 @@ input.accordion {
   color: var(--text-color-1);
   overflow: hidden;
   margin-bottom: 30px;
+  opacity: 1;
 }
 
 .tab-label {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
   min-height: 80px;
   padding: 0 2em;
   position: relative;
-  background: var(--bg-color);
   cursor: pointer;
   margin: 0;
 }
 
 .tab-label:hover {
-  background: var(--color-3);
-  color:var(--text-color-invert);
+  opacity: 1;
 }
 
 .tab-label::after {
@@ -1440,12 +1494,10 @@ input.accordion {
   right: 20px;
   text-align: center;
   transition: all .35s;
-  transform: rotate(270deg);
+  transform: rotate(180deg);
 }
 
 .tab-content {
-  background: var(--color-3);
-  color: var(--text-color-invert);
   max-height: 0;
   padding: 0 2em;
   text-align: left;
@@ -1459,12 +1511,11 @@ input.accordion {
 
 /* :checked */
 input:checked + .tab-label {
-  background: var(--color-3);
-  color: var(--text-color-invert);
+
 }
 
 input:checked + .tab-label::after {
-  transform: rotate(180deg);
+  transform: rotate(360deg);
 }
 
 input:checked  ~ .tab-content {
@@ -1473,6 +1524,22 @@ input:checked  ~ .tab-content {
   opacity: 100%;
 }
 
+/* back arrow */
+.nav-back {
+  position: relative;
+}
+
+.nav-back:before {
+  content: "\e928";
+  font-family: 'cat-icons'; 
+  width: 1em;
+  height: 1em;
+  position: absolute;
+  top: 0;
+  left: 20px;
+  text-align: center;
+  transform: rotate(90deg);
+}
 
 /* 
 ****************************************

@@ -142,7 +142,7 @@ a:hover {
 
 .nav-collapse li {
   float: left;
-  width: 100%;
+  width: 50%;
 }
 
 @media screen and (min-width: 767px) {
