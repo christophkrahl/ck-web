@@ -790,9 +790,13 @@ ul::marker {
 .banner.interview {
 
 }
-
-.bg-lightgray {
+ 
+.bg.lightgray {
   background: rgb(245,245,245);
+}
+
+.bg.blue {
+  background: var(--color-1);
 }
 
 /* --- BG COLOR ANIMATION --- */
