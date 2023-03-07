@@ -165,20 +165,21 @@
 }
 
 .box-link.enlarge:before {
-  background-color: transparent;
+  background-color: var(--bg-color);
   content: " \e98b";
   font-family: "cat-icons";
-  font-size: 1.6rem;
-  width: 45px;
-  height: 45px;
+  font-size: 1.3rem;
+  width: 40px;
+  height: 40px;
   bottom: 5%;
-  left: 5%;
+  right: 5%;
   position: inherit;
-  color: #fff;
+  color: var(--text-color);
   border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
+  opacity: .6;
 }
 
 .clear-float {
