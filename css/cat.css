@@ -77,7 +77,7 @@
 */
 
 :root {
---color-1: #009bea;
+--color-1: rgb(0,106,139);
 --color-2: #c1d31c;
 --color-3: #89d37e;
 --color-4: #ce1970;
@@ -1348,7 +1348,7 @@ li.variantentext {
   padding: 55px 0;
   color: var(--text-color-invert);
   font-weight: 300;
-  background: var(--darkgray);
+  background: var(--color-1);
   font-size: 15px;
 }
 
