@@ -149,9 +149,65 @@
   padding: 80px 0;
 }
 
+.spacer-md {
+  margin-bottom: 30px;
+}
+
+.spacer-lg {
+  margin-bottom: 50px;
+}
+
+.spacer-xl {
+  margin-bottom: 80px;
+}
+
 .margin-bottom {
   margin-bottom: 100px;
 }
+
+.job-block {
+  margin: 50px 0;
+}
+
+.skill-block {
+  margin-bottom: 10px;
+}
+
+.skill-bar {
+  height: 10px;
+  background-color: #999999;
+}
+
+.skill-bar span {
+  background-color: var(--color-1);
+  display: block;
+  height: 10px;
+}
+
+.percent-100 {
+  width: 100%;
+}
+
+.percent-95 {
+  width: 95%;
+}
+
+.percent-90 {
+  width: 90%;
+}
+
+.percent-85 {
+  width: 85%;
+}
+
+.percent-80 {
+  width: 80%;
+}
+
+.percent-40 {
+  width: 40%;
+}
+
 
 /* 
 ****************************************
@@ -238,6 +294,7 @@
   bottom: 0px;
   left: 0px;
   right: 0px;
+  overflow:hidden;
 }
 
 .video_wrapper{
@@ -274,6 +331,23 @@
 
 /* 
 ****************************************
+ potrait rounded
+****************************************
+*/ 
+
+.portrait {
+  background-color: #f7f7f7;
+  display: flex;
+  justify-content: start;
+  /* clip-path: circle(31% at center);*/
+}
+
+.portrait img {
+
+}
+
+/* 
+****************************************
  --- TYPO
 ****************************************
 */
@@ -283,7 +357,7 @@ body {
 	font-family: 'Nunito', sans-serif;
 	font-size: 16px;
 	line-height: 1.5em;
-	color: var(--text-color-invert);
+	color: var(--text-color);
 	font-weight: 200;
 	letter-spacing: 0.25px;
 }
@@ -301,7 +375,23 @@ h6 {
   font-weight: 200;
   color: var(--color-1);
   margin: 0;
-  margin-bottom: .4em;
+  margin-bottom: .2em;
+}
+
+h5,
+h6 {
+  color: var(--text-color);
+}
+
+.inverted p,
+.inverted h5,
+.inverted h6 {
+  color: var(--text-color-invert);
+}
+
+.bg.dark,
+.inverted {
+  color: var(--text-color-invert);
 }
 
 p {
@@ -333,7 +423,7 @@ p span.hl {
 
 .font-bg {
   background-color: var(--color-1);
-  color: var(--text-color-inverted);
+  color: var(--text-color-invert);
   display: table; /* important for line wrapping */
   padding: 5px 10px;
   margin-bottom: 1px;
@@ -726,7 +816,7 @@ img.icon {
 */
 
 a {
-  color: var(--color-1);
+  color: var(--color-2);
 }
 
 a:hover {
@@ -1013,7 +1103,7 @@ ul::marker {
 }
 
 .card .font-bg {
-  background-color: var(--bg-color-dark);
+  background-color: var(--bg-color-1);
   color: var(--text-color-invert);
   padding: 0 10px;
 }
@@ -1023,8 +1113,6 @@ ul::marker {
   color: var(--text-color);
   padding: 0 10px;
 }
-
-
 
 /* card-slider demo nav */
 .card-slider {
@@ -1348,7 +1436,7 @@ li.variantentext {
   padding: 55px 0;
   color: var(--text-color-invert);
   font-weight: 300;
-  background: var(--color-1);
+  background: #444;
   font-size: 15px;
 }
 
