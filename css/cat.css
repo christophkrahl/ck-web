@@ -339,6 +339,7 @@
   background-color: #f7f7f7;
   display: flex;
   justify-content: start;
+  height: 100%;
   /* clip-path: circle(31% at center);*/
 }
 
@@ -425,7 +426,7 @@ p span.hl {
   background-color: var(--color-1);
   color: var(--text-color-invert);
   display: table; /* important for line wrapping */
-  padding: 5px 10px;
+  padding: 5px 15px;
   margin-bottom: 1px;
 }
 
@@ -472,6 +473,17 @@ h5 {
 
 .textbreite {
   width: 85%;
+}
+
+.job-block h3 {
+  font-weight: 300;
+  font-size: 1.6em;
+}
+
+.job-block h3,
+.job-block h4,
+.job-block h5 {
+  margin-bottom: 0.2em;
 }
 
 /* special headline-styles */
@@ -733,7 +745,6 @@ img.icon {
 }
 
 .btn {
-  padding: 10px 40px;
   border-radius: var(--border-radius-xl);
   background: var(--color-1);
   display: inline-block;
@@ -741,6 +752,8 @@ img.icon {
   cursor: pointer;
   font-size: 1em;
   font-weight: 300;
+  padding: 10px 40px;
+  margin: 0 10px 10px 0;
   text-align: center;
 }
 
@@ -758,13 +771,23 @@ img.icon {
 }
 
 .btn-primary {
+  background: var(--bg-color);
+  color: var(--text-color);
+}
+
+.btn-primary:hover {
+	background: var(--color-1);
+  color: var(--text-color-invert);
+}
+
+.btn-primary-invert {
   background: var(--color-1);
   color: var(--text-color-invert);
 }
 
-.btn-primary:hover {
-	background: var(--color-2);
-  color: var(--text-color-invert);
+.btn-primary-invert:hover {
+  background: var(--color-2);
+  color: var(--text-color);
 }
 
 .btn-invert {
