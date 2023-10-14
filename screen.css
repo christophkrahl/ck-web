@@ -1,0 +1,182 @@
+body
+	{
+	font-family:  'Gentium Basic', Times, serif;
+	background-color: #fff;
+	tab-interval:14.2pt}
+	
+hr
+	{border: 0px; /* F&uuml;r Firefox und Opera */  
+	border-top: dotted 1px #c6c6c6; 
+	border-bottom: transparent; 
+	width: 99%}
+
+
+#container 
+	{display: block;
+	position: relative;
+	width: 55%;
+	max-width:700px;
+	margin-top: 0;
+	padding: 0px 0px 0px 0px; /* oben, rechts, unten, links */
+	margin-left: auto;
+	margin-right: auto;
+	text-align: justify;
+	border-left: 0px dotted #c3c3c3;
+	border-right: 0px dotted #e3e3e3;
+	/*background-image: url('../images/bg_verlauf_02.jpg');*/
+	background-color: #fff}
+
+#menue
+	{position:fixed; 
+	top:20px; 
+	left:20px;
+	width: 120px}	
+	
+#headnummer
+	{position: relative;
+	margin-top: 150px;
+	padding-top: 50px;
+	width: 99%;}
+	
+#head1
+	{position: relative;
+	padding: 10px 0px 10px 0px;
+	width: 99%;
+	border-top: 1px dotted #000000;
+	border-bottom: 1px dotted #000000;}
+
+#text
+	{position: relative}
+	
+	
+#fussnoten
+	{position: relative;}
+
+.headnummer
+	{font-size: 128.0pt;
+	font-weight: normal;
+	color: #000000;
+	line-height: 100%;
+	border-top: 0px dotted #000;
+	border-bottom: 0px dotted #000;
+	padding: 0px 0px 0px 0px; /* oben, rechts, unten, links */}
+	
+.head1
+	{font-size: 32.0pt;
+	font-weight: normal;
+	color: #000000;
+	line-height: 140%;
+	border-top: 0px dotted #ff0000;
+	border-bottom: 0px dotted #000;
+	padding: 0px 0px 0px 0px; /* oben, rechts, unten, links */}
+	
+.head2
+	{font-size: 20.0pt;
+	font-weight: normal;
+	line-height: 140%;
+	padding: 50px 0px 0px 0px; /* oben, rechts, unten, links */}
+	
+.head3
+	{font-size: 14.0pt;
+	font-weight: bold;
+	line-height: 140%;
+	padding: 20px 0px 0px 0px; /* oben, rechts, unten, links */}
+
+
+.text
+	{font-size: 14.0pt;
+	line-height: 140%}
+	
+.textzentriert
+	{font-size: 14.0pt;
+	line-height: 140%;
+	text-align: left}
+	
+.zitat
+	{font-size: 14.0pt;
+	font-style:italic;
+	line-height: 120%;
+	padding: 0px 0px 0px 35px; /* oben, rechts, unten, links */}}
+	
+.literatur
+	{font-size: 12.0pt;
+	line-height: 120%;}
+	
+
+.inhalt
+	{font-size: 14.0pt;
+	line-height: 100%}
+
+.inhaltabstand
+	{font-size: 12.0pt;
+	line-height: 80%}
+
+a, a:link, a:active
+	{color:#ff0000;
+	text-decoration: none;
+	padding: 2px;
+	font-size: 8.0pt;
+	vertical-align: middle}
+	
+a:hover, a:active
+	{color: #333}
+	
+a.inhalt, a.inhalt:link, a.inhalt:active
+	{color:#000;
+	text-decoration: none;
+	padding: 0px;
+	font-size: 14.0pt;
+	line-height: 100%}
+	
+a.inhalt:hover, a.inhalt:active
+	{color: #ff0000}
+
+ul#Navigation {
+    width: 8em;
+    margin: 0; 
+    padding: 0.1em;
+    border: 0px dotted black;
+    /* background-color: grey;*/
+  }
+  
+  * html ul#Navigation {  /* Korrekturen fuer IE 5.x */
+    width: 8.6em;
+    w\idth: 7em;
+    padding-left: 0;
+    padd\ing-left: 0.5em;
+  }
+  
+  ul#Navigation li 
+  	{list-style: none;
+    margin: 0.2em; 
+    padding: 0}
+
+  ul#Navigation a {
+    display:block;
+    padding: 4px 0px 2px 10px; /* oben, rechts, unten, links */ 
+    text-decoration: none;
+    font-size: 10.0pt; 
+    color: #fff; 
+    background-color: #000}
+    
+  * html ul#Navigation a {  /* Breitenangaben nur fuer IE */
+    width: 100%;
+    w\idth: 7.0em;}
+    
+  ul#Navigation a:hover 
+  	{color: white; 
+    background-color: #FF0000}
+
+a.button, a.button:link, a.button:active
+	{color:#000;
+	text-decoration: none;
+	font-size: 10.0pt;
+	line-height: 100%;
+	padding: 3px 30px 1px 30px; /* oben, rechts, unten, links */ 
+	border: 1px dotted #000;
+	background-color:#fff;}
+	
+a.button:hover, a.button:active
+	{color: #FFF;
+	background-color:#000}
+	
